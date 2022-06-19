@@ -10,5 +10,8 @@ def hello(request):
 
 def homepage(request):
     template = get_template("base.html")
-    html = template.render()
+    context = {
+        "nom": "Montréal"
+    }
+    html = template.render(context)
     return HttpResponse(html)

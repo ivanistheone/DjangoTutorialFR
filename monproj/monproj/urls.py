@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from monsite.views import hello
+from monsite.views import homepage
 
 urlpatterns = [
+    url(r'^', homepage),
     url(r'^hello', hello),
     url(r'^admin/', admin.site.urls),
 ]

@@ -1,4 +1,7 @@
 
+monproj/db.sqlite3
+related
+
 *.ipynb_checkpoints
 *.py[cod]
 

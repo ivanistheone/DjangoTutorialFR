@@ -13,9 +13,10 @@ def hello(request):
     return HttpResponse(msg)
 
 def homepage(request):
-    template = get_template("base.html")
+    template = get_template("homepage.html")
     context = {
-        "nom": "Montréal"
+        "nomcompagnie": "Minireference Co.",
+        "pitch": "Nous utilisons Python, Git et LaTeX pour créer des livres compacts sur les maths, les sciences, et l'informatique",
     }
     html = template.render(context)
     return HttpResponse(html)

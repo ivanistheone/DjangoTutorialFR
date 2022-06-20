@@ -20,8 +20,8 @@ from monsite.views import hello
 from monsite.views import homepage
 
 urlpatterns = [
-    url(r'^/', homepage),
     url(r'^hello', hello),
+    url(r'^', homepage),
     url(r'^admin/', admin.site.urls),
 ]
 

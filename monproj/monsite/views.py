@@ -5,7 +5,11 @@ from django.template.loader import get_template
 # Create your views here.
 
 def hello(request):
-    msg = "Salut Montréal!"
+    if "nom" in request.GET:
+        nom = request.GET["nom"]
+    else:
+        nom = "Montréal"
+    msg = "Salut " + nom + "!"
     return HttpResponse(msg)
 
 def homepage(request):
